@@ -1,0 +1,138 @@
+/* Styles for the overall page */
+html {  /* specify styling rules for everything in the html tag */
+    height: 100%;    /* we want the html document to fill the full space of what it is in */
+    font-size: 16px; /* set the default font size for the page                            */
+}
+
+* {     /* specify styling rules for EVERYTHING in the document (a document is file containing html) */
+    box-sizing: border-box; /* include the margins and border in the box size                        */
+                            /*             easier placement of elements - more tomorrow              */
+}
+
+body {  /* specify styling rules for everything in the body tag */
+    font-family: "Raleway", sans-serif;  /* Use the Raleway font and if not available any sans-serif font */
+    /* make background go from gray to lightgray from top to bottom    */
+    background-image: linear-gradient(to bottom, gray, lightgray);
+    background-repeat: no-repeat; /* do not repeat the background stretch it to fille the page */
+    background-attachment: fixed; /* do not scroll the background                              */ 
+}
+
+header > h1,    /* style the h1 child (>) tag of the header tag (go to header tag and it's child (>) h1 tag) */
+header > p {    /* and (,) the p child of the header tag (go to header and it's child p tag)                 */
+    display: inline-block;  /* place the elements next to each other    */
+    height: 20px;           /* limit the height of the elements to 20px */  
+    padding-right: 20px;    /* pad each element to right a little       */
+    vertical-align: middle; /* align each content to middle of it's box */
+    color: white;         /* make content white                       */
+    border-right: 1px solid white; /* put a white border on the right of each content (vertical line) */
+}
+header > h1 { /* style the h1 child (>) tag of the header tag (go to header tag and it's child (>) h1 tag) */
+    text-transform: uppercase;  /* convert text to upper case */
+    font-size: 1.1rem;          /* rem=the font size - 1.1rem is slightly larger than font size            */
+
+}
+
+div.trello-list { /* style all div elements with a class="trello-list" (. indicates a class selector) */
+    display: inline-block; /* place the elements next to each other          */
+    width: 300px;          /* make the columns fixed size                    */
+    background: #ddd;    /* set background color to hexadecimal ddd (#ddd) */
+    border-radius: 2px 2px;/* make corners slightly rounded                  */
+}
+div.trello-list h2 { /* style all h2 elements in div elements with a class="trello-list" (. indicates a class selector) */
+    margin: 8px;       /* move it over from edge                           */
+    font-size: 1rem;   /* keep the font size consistent with document size */
+    font-weight: bold; /* make the font bold                               */
+}
+
+div.trello-list ol { /* style all ol elements in div elements with a class="trello-list" (. indicates a class selector) */
+    margin: 0px;  /* no margins */
+    padding: 0px; /* no padding */
+}
+
+div.trello-list li { /* style all li elements in div elements with a class="trello-list" (. indicates a class selector) */
+    list-style:none; /* remove the numbers from the list items */
+    background-color: rgb(255, 255, 255); /* set background color to all red, green, blue (white) */
+    font-size: .9rem;    /* set the font size to slightly smaller than normal */
+    border-radius: 1px;  /*  slightly round the borders                       */
+    margin-bottom: 10px; /* put a small margin at the bottom                  */
+    padding: 8px;        /* put space around the content                      */
+    /* white-space property added after lecture                               */
+    white-space: normal; /* wrap text and collapse white space                */ 
+}
+
+div.trello-list {   /* since we specified styling for bodyt earlier, anything in here will override any
+                       matching properties specified earlier (Cascading - applies styles from top to bottom)
+                        it is safer (and much less confusing/error prone) to put all styling for an element in one place */
+    vertical-align: top; /* align the elements at the top */ 
+}
+
+/****************************************************************************************************
+  The styling that follows was added after the lecture to complete the problem
+ ***************************************************************************************************/
+
+
+body { /* since we specified styling for body earlier, anything in here will override any
+          matching properties specified earlier (Cascading - applies styles from top to bottom)
+          it is safer (and much less confusing/error prone) to put all styling for an element in one place   */
+    white-space: nowrap; /* don't wrap elements onto next line if they don't fit - add horizontal scroll bar */
+}
+
+div.trello-list li:last-child { /* Style the last li in the div with class="trello-list"       */
+    margin-bottom: 0px;  /* remove the margin from the last item since there is nothing after it */
+  }
+  
+div.trello-list li:hover { /* Style the li in the div with class="trello-list" for when cursor hovers on them */
+     background-color: #f5f6f7; /* Set the background color to a slightly grayer white        */
+     color: #092d42;            /* change the color of the list item                          */
+     font-weight: bold;           /* and bold it                                                */
+  }
+
+div.trello-list a { /* Style the hyperlink in the <a> tag at the bottom of the div with class="trello-list"  */
+    display:block;            /* Change display to block style                                               */
+    text-decoration: none;    /* remove the underline from the hyperlink                                     */
+    color: #888;            /* change the color to a shade of gray                                         */
+    padding: 8px 0px 8px 5px; /* set the top right bottom left padding values to put space around hyperlink  */
+    font-size: .85rem;        /* set font-size to a little smaller than normal                               */
+}
+
+div.trello-list a:hover { /* style when user hovers over hyperlink at the bottom of the div with class="trello-list" */
+background-color: rgba(9, 45, 66, .1); /* red green blue transparency - darken it and make it a little transparent */
+}
+
+.labels span { /* style the span tags in any element with class="labels" - make room for colored bars  */
+    display: inline-block; /* Set display so elements do across the page next to each other  */
+    vertical-align: top;   /* align all elements at the top                                  */
+    width: 35px;           /* make element 35px wide                                         */
+    height: 8px;           /* make element 8px high                                          */
+    border-radius: 3px;    /* slightly round the corners                                     */
+}
+
+/* set the colors of the bars at the top of each item                                                */
+.label.pathway { /* style any element with class="label pathway" inside an element with class="label"      */
+    background-color: red; /* set bar to color red                                                 */
+}
+.label.individual { /* style any element with class="label individual" inside an element with class="label" */
+    background-color: green; /* set bar to color green                                              */
+}
+.label.pair { /* style any element with class="label pair" inside an element with class="label"             */
+    background-color: teal; /* set bar to color teal                                                */
+}
+.label.general { /* style any element with class="label general" inside an element with class="label" */
+    background-color: orange; /* set bar to color orange                                              */
+}
+
+/* Set styles for the scrollbar using 3rd party tool webkit - see info link in google doc for details */
+
+body::-webkit-scrollbar { /* style the scrollbar in the body, if present */ 
+   width: 10px;  /* set the width of the scrollbar to 10px               */
+}
+body::-webkit-scrollbar-track { /* style the scrollbar track in the body, if present */ 
+    background:#BBB;  /* set color of scrollbar track to darker gray               */
+ }
+ body::-webkit-scrollbar-thumb { /* style the scrollbar thumb (the part that moves) in the body, if present */ 
+    background: lightyellow;   /* set color of scrollbar thumb to lightyellow  */
+    border-radius: 5px;          /* slightly round the corners                   */
+ }
+ body::-webkit-scrollbar-thumb:hover { /* style the scrollbar thumb (the part that moves) in the body, if present */ 
+    background: yellow;              /* set color of scrollbar thumb to lightyellow  */
+ }

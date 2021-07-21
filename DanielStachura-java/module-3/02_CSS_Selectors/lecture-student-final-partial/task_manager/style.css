@@ -1,0 +1,71 @@
+/* Styles for the overall page */
+html {  /* specify styling rules for everything in the html tag */
+    height: 100%;    /* we want the html document to fill the full space of what it is in */
+    font-size: 16px; /* set the default font size for the page                            */
+}
+
+* {     /* specify styling rules for EVERYTHING in the document (a document is file containing html) */
+    box-sizing: border-box; /* include the margins and border in the box size                        */
+                            /*             easier placement of elements - more tomorrow              */
+}
+
+body {  /* specify styling rules for everything in the body tag */
+    font-family: "Raleway", sans-serif;  /* Use the Raleway font and if not available any sans-serif font */
+    /* make background go from gray to lightgray from top to bottom    */
+    background-image: linear-gradient(to bottom, gray, lightgray);
+    background-repeat: no-repeat; /* do not repeat the background stretch it to fille the page */
+    background-attachment: fixed; /* do not scroll the background                              */ 
+}
+
+header > h1,    /* style the h1 child (>) tag of the header tag (go to header tag and it's child (>) h1 tag) */
+header > p {    /* and (,) the p child of the header tag (go to header and it's child p tag)                 */
+    display: inline-block;  /* place the elements next to each other    */
+    height: 20px;           /* limit the height of the elements to 20px */  
+    padding-right: 20px;    /* pad each element to right a little       */
+    vertical-align: middle; /* align each content to middle of it's box */
+    color: white;         /* make content white                       */
+    border-right: 1px solid white; /* put a white border on the right of each content (vertical line) */
+}
+header > h1 { /* style the h1 child (>) tag of the header tag (go to header tag and it's child (>) h1 tag) */
+    text-transform: uppercase;  /* convert text to upper case */
+    font-size: 1.1rem;          /* rem=the font size - 1.1rem is slightly larger than font size            */
+
+}
+
+div.trello-list { /* style all div elements with a class="trello-list" (. indicates a class selector) */
+    display: inline-block; /* place the elements next to each other          */
+    width: 300px;          /* make the columns fixed size                    */
+    background: #ddd;    /* set background color to hexadecimal ddd (#ddd) */
+    border-radius: 2px 2px;/* make corners slightly rounded                  */
+}
+div.trello-list h2 { /* style all h2 elements in div elements with a class="trello-list" (. indicates a class selector) */
+    margin: 8px;       /* move it over from edge                           */
+    font-size: 1rem;   /* keep the font size consistent with document size */
+    font-weight: bold; /* make the font bold                               */
+}
+
+div.trello-list ol { /* style all ol elements in div elements with a class="trello-list" (. indicates a class selector) */
+margin: 0px;  /* no margins */
+padding: 0px; /* no padding */
+}
+
+div.trello-list li { /* style all li elements in div elements with a class="trello-list" (. indicates a class selector) */
+    list-style:none; /* remove the numbers from the list items */
+    background-color: rgb(255, 255, 255); /* set background color to all red, green, blue (white) */
+    font-size: .9rem;    /* set the font size to slightly smaller than normal */
+    border-radius: 1px;  /*  slightly round the borders */
+    margin-bottom: 10px; /* put a small margin at the bottom */;
+    padding: 8px;        /* put space around the content */
+}
+
+div.trello-list li:hover { /* Style the li in the div with class="trello-list" for when cursor hovers on them */
+    background-color: #f5f6f7; /* Set the background color to a slightly grayer white        */
+    color: #092d42;            /* change the color of the list item                          */
+    font-weight: bold;           /* and bold it                                                */
+
+}
+
+div.trello-list {   /* since specified styling for div.trello-list earlier, anything in here will override and
+                       any matching properties specified earlier (Cascading - applies styles from top to bottom */
+    vertical-align: top; /* align the elements at the top */ 
+}

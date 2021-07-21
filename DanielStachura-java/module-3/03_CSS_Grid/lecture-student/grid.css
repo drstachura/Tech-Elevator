@@ -1,0 +1,36 @@
+/* define the grid layout and assign elements to the grid */
+
+.container {        /* style everything with the class="container" */
+    display: grid;  /* tell the browswer we want to use the grid layout for this selection */
+
+    /* define the fraction units for each column in the web page - figure out how many columns we want */
+    /* 3 column grid where the first and last column are the same size and the middle is 3x the size */
+    grid-template-columns: 1fr 3fr 1fr; /* 3 column grid - 1st and 3rd are same size, middle is bigger */
+    grid-template-areas:  /* assign names to the columns in each row of the grid - each line is a row in the grid */
+        "header header header"  /* all the columns in the 1st row will hold one type of data */
+        "menu-nav main upcoming-events" /* 2nd row will have different things in each column */
+        "footer footer footer"  /* all the columns in the 3rd row will have the same content */
+    ;   /* DO NOT FORGET the semi-colon to mark the end of grid-template-areas */
+    
+    grid-gap: 10px; /* put a 10px spacing between all rows and columns*/
+}   /* DO NOT FORGET to close the selector for the grid */
+
+    /* assign the html elements to the grid columns */
+    header {    /* style everything in the header element*/
+        grid-area: header;  /* assign it to the header parts of the grid - the 1st row */
+    }
+    nav#menu-nav {  /* #=id  style the nave with id="menu-nav" */
+        grid-area: menu-nav;    /* assign it to the menu-nave part of the grid */
+    }
+    main {  /*style everything in the main element */
+        grid-area: main;    /* assign it to the menu-nav parts of the grid */
+    }
+    aside#upcoming-events { /* style everything in the aside element */
+        grid-area: upcoming-events; /* assign it to upcoming-events parts of the grid */
+    }
+    footer {    /* style everything in the footer element */
+        grid-area: footer;  /* assign it to footer parts of the grid */
+    }
+
+
+

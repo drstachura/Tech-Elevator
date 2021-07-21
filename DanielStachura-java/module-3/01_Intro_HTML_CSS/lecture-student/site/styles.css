@@ -1,0 +1,31 @@
+/* a comment in a css file is like a block comment in Java */
+/*******************************************************************
+a stylesheet is a series of css selectors and attributes
+
+a selector may be several different things 
+     for today we are just using element selectors in this example
+    
+an element selector is a tag-name followed by the style attributes to be applied to it
+
+    main {              /* select all main tags in the html and apply these styles
+        width : 40px;   /* set the width of everything to 40px
+        height : 80px;  /* set the height of everything to 80px
+    }
+********************************************************************/
+
+body {      /* style EVERYTHING in the body tag of the html */
+        /* font-family gives the browser a choice of fonts to use for the page */
+        /* if the first font listed is not available, it tries the second, */
+        /* then the third if the second is not available until it finds one that is */
+        /* if no fonts in the list are available it uses its default font */
+    font-family : Arial, Helvetica, sans-serif;
+}
+
+img {       /* style ALL img tags */
+    height : 200px;
+}
+
+h1 {        /* style ALL the h1 tags */
+    color : rgb(100, 114, 237);
+    font-size: 32px;
+}

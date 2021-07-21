@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1 - Reservation</title>
+    <link rel="stylesheet" href="style.css"/>  <!-- tell the browser the style sheet we want applied to this html -->
+</head>
+<body>
+    <header> <!-- optional - group content that's at the top of the page -->
+        <h1>Bits & Bytes</h1>    <!-- h1 tag gives us the largest heading style -->
+        <p>Welcome to internet's best (non-Italian) restaurant</p>
+    </header>
+    <nav> <!-- optional - put ways to get (navigate) to other parts of teh web application -->
+        <!-- the anchor tag  -a - allow us to specidy a link to another page or location  -->
+        <!--     the href="" attribute is where you specify where to go                    -->
+        <a href="index.html">View Menu</a>
+    </nav> 
+        
+    <main>
+        <h2>Reservation Form</h2>
+        <!-- Use a form to get information from the user and send it to an API                                 -->
+        <!-- Since the form data will be used to add a reservation to API resource                             -->
+        <!--       we need to send POST request to API server                                                  -->
+        <!-- For now we will code a dummy API until to be replaced later by real one                           -->
+        <!-- Use the input tag to define a user interactive field on the screen                                -->
+        <!-- assign an id="" to teh input field so we can a label to be displayed in front of the field        -->
+        <!-- the for="" attribute in the label tag connects the labe to an input field                         -->
+        <!--                                                                                                   -->
+        <!-- Since the form sends an HTTP request to an API server, the data in form must be converted to JSON -->
+        <!--           for a POST the data is sent in the request body                                         -->
+        <!-- html forms automatically convert the input data to JSON and sends it to the API server            -->
+        <!--      For a POST or PUT the data is placed in the request body                                     -->
+        <!--      For a GET / DELETE the data is placed in the query string                                    -->
+        <!--                                                                                                   -->
+        <!-- All you have to do is be sure your input tags have a name="" that matches the associated          -->
+        <!--     JSON attributes or query string attributes                                                    -->
+        <!--                                                                                                   -->
+        <!-- the name="" attribute on the input tag assign a name to the user input entered                    -->
+
+        <form method="POST" action="https://5f02f3429e41230016d43346.mockapi.io/api/reservations">
+            <div> <!-- Get the name for the reservation from the user -->
+                <label for="nameField">Name: </label> <!-- a label tag places words in front of  the element with the id in for="" -->
+                <input type="text" id="nameField" name="reservationName"/> <!-- display a text box to user for them to type name -->
+            </div>
+
+            <div>
+                <label for="guestField">Number of guests: </label>
+                <input type="number" id="guestsField" name="numberOfGuests"/>
+            </div>
+
+            <div>
+                <label for="reservationDate">Date: </label>
+                <input type="date" id="reservationDate" name="reservationDate"/>
+            </div>
+
+            <div>
+                <label for="resTime">Time: </label>
+                <input type="time" id="resTime" name="reservationTime" />
+            </div>
+
+            <div>
+                <label for="specialOccasion">Special Occasion? </label>
+                <input type="checkbox" id="specialOccasion" name="specialOccasion" />
+            </div>
+           <div> <!-- optional - provide a style-able unit for css - logically group html elements -->
+                <input type="submit" />  <!-- add a submit button to the form -->
+           </div> 
+        </form>
+    </main>
+</body>
+</html>

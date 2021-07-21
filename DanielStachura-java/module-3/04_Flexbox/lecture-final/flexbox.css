@@ -1,0 +1,58 @@
+/* specify the elements in the html we want to use flexbox layout                                             */
+body,                        /* style all content in the body                                                 */
+#hero footer,                /* style all content in all footers of elements with id="hero"                   */
+#featured section,           /* style all content in all sections of elements with id="featured"              */
+#featured section article div,
+#all-items section,          /* style all content in all sections of elements with id="all-items"             */
+#all-items section article { /* style all content in articles in all sections of elements with id="all-items" */
+    display:flex;            /* use the flex box layout                                                       */
+}
+
+body,
+#all-items section {
+    flex-direction: column;
+}
+
+body { /* style all content of the body */
+    align-items: center;
+}
+
+#featured section article div { /* style all div in all article in all section of all elements with id="featured" */
+    justify-content: center;
+}
+
+#all-items section article {
+    justify-content: center;
+}
+
+#hero footer,
+#all-items section article {
+    align-items: center;
+}
+
+#hero footer {
+    justify-content: space-between;
+}
+
+#all-items article div:last-child {  /* style the last child div of all articles in elements with id="all-items" */
+     flex-basis: 80%;     /* how much of the flex container should be taken up by this element   */
+}
+
+/* div:first-child in each article is the icon                                     */
+/* article:nth-child(even) - even numbered articles - 2nd, 4th, 6th, 8th 10th, etc */
+/* article:nth-child(even) div:first-child - every other icon in an article        */
+/* combined with order 2 - every other icon in the even numbered articles should be the 2nd item in the flex container */
+
+#all-items article:nth-child(even)  div:first-child { /* first child div of each even number article in elements with id="all=items" */
+    Order: 2; /* make it the second item in the flex container */
+}
+
+@media screen and (max-width: 1024px) {
+    #featured section {
+        flex-wrap: wrap;
+    }
+
+    #featured section article:nth-child(even) {
+        border: none;
+    }
+}

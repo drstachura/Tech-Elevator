@@ -1,0 +1,66 @@
+/* Styles for the overall page */
+html {  /* specify styling rules for everything in the html tag */
+    height: 100%;   /* we want the html document to fill the full space of what it's in */
+    font-size: 16px;    /* set the default font size for the page - other rules can override this, but default is set */
+}
+
+* {     /* specify styling rules for EVERYTHING in the document (a document is a file containing html) */
+    box-sizing: border-box; /* include the margins and border in the box size */
+                            /*  easier placement of elements - more tomorrow */
+}
+
+body {  /* specify styling rules for everything in the body tag */
+    font-family: "Raleway", sans-serif; /* use the Raleway font and if not available use sans-serif*/
+    /* make the background go from gray to lightgray from top to bottom */
+    background-image: linear-gradient(to bottom, gray, lightgray);
+    background-repeat: no-repeat;   /* do not repeat the background, stretch it to fill the page */
+    background-attachment: fixed;   /* do not scroll the background */
+}
+
+header > h1 ,   /* style the h1 child tag (>) of the header tag (go to header tag and then child h1 tag */
+header > p {    /* and (,) the p child of the header tag */
+    display: inline-block;  /* place the elements next to each other */
+    height: 20px;   /* limit the height of the elements to 20px */
+    padding-right: 20px;    /* pad each element to the right a little */
+    vertical-align:  middle;    /* align each content to the middle of its box */
+    color: white;   /* make the content color white */ 
+    border-right: 1px solid white;  /* put a border on the right side of each content */
+}
+
+header > h1 {
+    text-transform: uppercase;  /* convert the text to upper case */
+    font-size: 1.1rem;  /* rem=the font size - 1.1rem is slightly larger than font size*/
+}
+
+div.trello-list {   /* style all div elements with a class="trello-list" (. indicates a class selector) */
+    display: inline-block;
+    width: 300px;   /* set width because inline-block take up as much space as they need */
+    background: #ddd;   /* set background color to hexadecimal ddd(#ddd) */ 
+    border-radius: 2px 2px; /* make the corner slightly rounded */
+}
+
+div.trello-list h2 { /* style all h2 div elements with a class="trello-list" (SPACE vs (>) indicates a class selector) */
+    margin: 8px; /* move it over from edge */
+    font-size: 1rem;  /* keep font size to defined default above (html {16px}) */
+    font-weight: bold;  /* make the font bold */
+}
+
+div.trello-list > ol { /* style all ol elements with a class="trello-list" (. indicates a class selector) */
+    margin: 0;  /* no margins - puts right to the edge */
+    padding: 0; /* no padding - puts right to the edge */
+}
+
+div.trello-list > ol > li {
+    list-style: none; /* remove the numbers from the list */
+    background-color: rgb(255,255,255); /* set background color to all red, green, blue(white) */
+    font-size: .9rem;   /* set font size to slightly smaller than normal */
+    border-radius: 1px; /* set the corners to be slightly rounded */
+    margin-bottom: 10px;  /* put a small margin at the bottom */  
+    padding: 8px; /* put space around the content*/
+}
+
+div.trello-list {   /* since we specified styling for div.trello-list earlier in the file..
+                        anything in here will override any matching properties specified earlier 
+                        (Cascading - applies the styles from top to bottom) */
+    vertical-align: top;
+}

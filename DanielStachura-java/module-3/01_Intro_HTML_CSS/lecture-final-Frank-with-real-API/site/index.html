@@ -1,0 +1,50 @@
+<!-- any thing in HTML that starts with less-than-sign exclamation-point is an directive to browser -->
+<!-- html is the information/data you want displayed - directives are not displayed                 -->
+
+<!DOCTYPE html>   <!-- DOCTYPE tells teh browser what type of tags are in the file - optional              -->
+<html lang="en">  <!-- the container for all the html in this file                                        -->
+<head>            <!-- contains information the browser needs to know about the html - not displayed      -->
+    <meta charset="UTF-8">  <!-- meta tag identifies information for the browser                          -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-1 Lecture</title> <!-- The words placed in the tab of the browser for the  page             -->
+    <!-- the link tag connects the html to external files you want teh brow  ser to use                    -->
+    <!-- the rel="" attribute indicates teh type of file and the href="" attribute is the path to the file -->
+    <!-- the path to the stylesheet file is relative to the project folder (as always)                     -->
+    <link rel="stylesheet" href="style.css"/>  <!-- tell the browser the style sheet we want applied to this html -->
+</head>
+<body> <!-- Container for the primary content of the web page - what is displayed by the browser -->
+    <header> <!-- optional - group content that's at the top of the page -->
+        <h1>Bits & Bytes</h1>    <!-- h1 tag gives us the largest heading style -->
+        <p>Welcome to internet's best (non-Italian) restaurant</p>
+    </header>
+    <nav> <!-- optional - put ways to get (navigate) to other parts of teh web application -->
+        <!-- the anchor tag  -a - allow us to specidy a link to another page or location  -->
+        <!--     the href="" attribute is where you specify where to go                    -->
+        <a href="reservation.html">Make a Reservation</a>
+    </nav> 
+        
+
+    
+    <main> <!-- optional - container for primary information display on the page -->
+         <h2>Menu</h2>
+             <section> <!-- optional - used to group logical units of content for styling -->
+               <h3>Lunch</h3>
+               <p>Full Stack Sandwich</p>
+               <!-- the <img tag will include an image on the page        -->
+               <!-- the path to the image is coded on the src= attribute  -->
+               <!-- paths specified are relative to the project folder    -->
+               <img src="images/menu/lunch/full-stack-sandwich.png"/>  <!-- not use of the short cut end tag - a / inside the start-tag at the end -->
+               <p>Universal Serial Burger</p>
+               <img src="images/menu/lunch/USBurger.png"/>  <!-- not use of the short cut end tag - a / inside the start-tag at the end -->
+             </section>
+            <section> <!-- optional - used to group logical units of content for styling -->
+               <h3>Dinner</h3>
+               <p>Rack of RAM</p>
+               <img src="images/menu/dinner/rack-of-ram.png"/>  <!-- not use of the short cut end tag - a / inside the start-tag at the end -->
+               <p>Vegetable Array</p>
+               <img src="images/menu/dinner/array-of-vegetables.png"/>  <!-- not use of the short cut end tag - a / inside the start-tag at the end -->
+            </section>
+    </main>
+</body>
+</html>   <!-- every html tag has an end-tag that start with a /                                 -->

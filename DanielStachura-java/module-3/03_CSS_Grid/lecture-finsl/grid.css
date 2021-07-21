@@ -1,0 +1,38 @@
+/* define the grid layout and assign elements to teh grid */
+
+.container { /* style everything with class="container" */
+    display : grid;     /* tell the browser we want to use the grid layout for this selection */
+
+    /* define the fractional units for each column in the web page - figure out how many columns we want               */
+    /* 3 column grid where the first and last column are the same size and them middle is 3 times the size 1st and 3rd */
+    grid-template-columns: .5fr 3fr .5fr; /* 3 column grid - 1st and 3rd are the same size the middle is bigger   */
+    grid-template-areas:    /* assign names to the columns in row of the grid - each line is a row in the grid  */
+        "header    header  header"          /* all the columns in the first will hold one type of data          */
+        "menu-nav  main    upcoming-events" /* 2nd row will have different things in each column                */ 
+        "footer    footer  footer"          /* all the columns in the third row will have the same content      */
+    ; /* Don't forget the semi-colon to mark the end of grid-template-areas    */
+
+    gap: 10px;  /* put a 10px spacing between all rows and columns */
+
+} /* don't forget to close the selector for the grid
+
+    /* assign the html elements to the grid columns               */
+
+    header {  /* style everything in the header element */
+        grid-area: header;  /* assign it to the header parts of the grid */
+    }
+
+    nav#menu-nav { /* style the nav with id="menu-nav" */
+        grid-area: menu-nav; /* assign it to the menu-nav parts of the grid*/
+    }
+
+    main { /* style everything in the main element */
+        grid-area: main; /* assign it to the main parts of the grid */
+    }
+    aside { /* style everything in the aside element */
+        grid-area: upcoming-events; /* assign it to upcoming-events part of  the grid */
+    }
+
+    footer { /* style everything in the footer element */
+        grid-area: footer; /* assign it to the footer parts of grid */
+    }

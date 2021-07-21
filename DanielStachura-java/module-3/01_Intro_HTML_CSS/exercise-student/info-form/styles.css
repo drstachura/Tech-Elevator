@@ -1,0 +1,13 @@
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-image: linear-gradient(to bottom, gray, lightgray);
+    background-attachment: fixed;
+}
+
+div{
+    margin: 10px;
+}
+
+label{
+    margin: 5px;
+}

@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: rgba(192, 192, 192, 0.1);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+aside {
+  position: fixed;
+  width: 200px;
+  border-right: 1px solid rgba(0, 173, 238, 0.4);
+  height: 100vh;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+aside > img {
+  height: 120px;
+
+  margin: 0 auto;
+}
+
+main {
+  margin-left: 200px; 
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+aside > nav > ul > li {
+  list-style: none;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 173, 238, 0.4);
+  margin: 10px auto;
+  padding-bottom: 10px;
+  width: 80%;
+  line-height: 2;
+
+
+}
+
+aside > nav > ul > li > a {
+  font-weight: bold;
+  font-display:  #00ADEE;
+  text-decoration: none;
+  
+}
+
+
+aside > nav > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+header {
+  height: 120px;
+}
+
+header > img {
+  height: 80%;
+}
+
+img.banner {
+  block-size: 100%;
+}
+
+main > section > div {
+  display: inline-block;
+  width: 33%; 
+  padding-right: 20px;
+  margin-top: 20px;
+  vertical-align: top;
+}
+
+div#what-we-do > h2{
+  color: #8CC36F;
+}
+div#our-work > h2{
+  color: #8CC36F;
+}
+div#contact-us > h2{
+  color: #8CC36F;
+}
+
+div > h2 > i {
+  margin-right: 10px;
+}
+
+div#what-we-do {
+  border-right: solid 1px;
+  border-color: rgba(170, 239, 135, 0.8);
+}
+
+div#our-work {
+  border-right: solid 1px;
+  border-color: rgba(170, 239, 135, 0.8);
+}
+
+div#our-work {
+  padding-left: 20px;
+}
+
+div#contact-us {
+  padding-left: 20px;
+}

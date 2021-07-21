@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Page - Lecture</title>
+    <link rel="stylesheet" href="styles.css"/> <!-- link the css file we have to this html            -->
+</head>
+<body> <!-- the main display part of the web page -->
+    <h1>Bits & Bytes</h1>    <!-- h1 is main heading  -->
+    <p>Welcome to the internet's best (non-Italian) restaurant</p>
+
+    <nav> <!-- document places a user may navigate outside this page                                 -->
+         <!-- the anchor tag (a) give you a place to specify a link for navigation                   -->
+         <!-- the href="" attribute specifies the URL of where you want to go (outside the page)     -->
+         <a href="index.html">View Menu</a> <!--the text between the start &  end tags is displayed -->
+    </nav>
+
+    <main>
+        <h2>Reservation Form</h2>
+        <!-- Define an html form to collect user input and issue a HTTP POST to a URL specified           -->
+        <!-- Right now we will code a dummy URL that does not exist to demonstrate                        -->
+        <!-- Frank will set up a URL we can post to and we will use it when it is ready                   -->
+        <!-- We will be doing an HTTP POST because if this were real we'd be adding a reservation         -->                            
+       
+        <!-- the form tag method="" specifies the HTTP request to be sent to URL specified in action=""   -->
+        <form method="POST" action="dummy-url-for-now">
+            <!-- an html form is a set of user interaction controls                                       -->
+            <div> <!-- a div gives us a style-able unit within the html - it has no impact on the display -->
+                <!-- the input tag defines a user interactive element - there are many types              -->
+                <!-- the id="" attribute of input box assigns a name so we can reference it in the html   -->
+                <!-- the type="" attribute indicates the type of user interaction you want                -->
+                <!-- the label tag identifies words to be displayed with input element                    -->
+                <!-- the for="" attribute in the label is the id of the element it is associated with     -->
+                <!-- whatever is between the start and end tags of label is displayed with the input elem -->
+
+                <label for="reservationName">Name: </label>
+                <input  id="reservationName" type="text"/> <!-- display a input text box-->
+            </div>
+
+            <div>
+                <label for="numberOfGuests">Number of guests: </label>
+                <input  id="numberOfGuests" type="number"/>
+            </div>
+
+            <div>
+                <label for="reservationDate">Date: </label>
+                <input  id="reservationDate" type="date"/>
+            </div>
+
+            <div>
+                <label for="reservationTime">Time: </label>
+                <input  id="reservationTime" type="time"/>
+            </div>
+
+            <div>
+                <label for="isSpecialOccasion">Special Occasion? : </label>
+                <input  id="isSpecialOccasion" type="checkbox"/>
+            </div>
+            <!-- We need to add a submit for the form which will send the HTTP request (method=" "") to the URL (action="") -->
+            <div>
+                <input type="submit"/>
+            </div>
+        </form>
+    </main>
+    </body>
+</html>
